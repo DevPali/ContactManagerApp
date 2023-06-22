@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-6">Please enter your credentials</h1>
+    <br />
+    <form id="login-form">
+        <div>
+            <input type="text" placeholder="Username" name="Username" class="my-2" />
+        </div>
+        <div>
+            <input type="password" placeholder="Password" name="Password" class="my-2" />
+        </div>
+        <span id="LoginError"></span>
+        <div>
+            <button type="button" id="btnLogin">Login</button>
+        </div>
+    </form>
+</div>
+
+<script src="~/js/login.js"></script>

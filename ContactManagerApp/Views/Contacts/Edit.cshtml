@@ -1,0 +1,85 @@
+﻿@*@model ContactManagerApp.Models.Contact*@
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Contact</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form id="edit-contact-form">
+            @*<div asp-validation-summary="ModelOnly" class="text-danger"></div>*@
+            <div class="form-group">
+                @*<label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>*@
+                <label class="control-label">First Name*</label>
+                <input name="FirstName" id="firstName" class="form-control" />
+                <span id="FirstNameError" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                @*<label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>*@
+                <label class="control-label">Last Name*</label>
+                <input name="LastName" id="lastName" class="form-control" />
+                <span id="LastNameError" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                @*<label asp-for="City" class="control-label"></label>
+                <input asp-for="City" class="form-control" />
+                <span asp-validation-for="City" class="text-danger"></span>*@
+                <label class="control-label">City</label>
+                <input name="City" id="city" class="form-control" />
+                <span id="CityError" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                @*<label asp-for="Prefecture" class="control-label"></label>
+                <input asp-for="Prefecture" class="form-control" />
+                <span asp-validation-for="Prefecture" class="text-danger"></span>*@
+                <label class="control-label">Prefecture</label>
+                <input name="Prefecture" id="prefecture" class="form-control" />
+                <span id="PrefectureError" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                @*<label asp-for="PostalCode" class="control-label"></label>
+                <input asp-for="PostalCode" class="form-control" />
+                <span asp-validation-for="PostalCode" class="text-danger"></span>*@
+                <label class="control-label">Postal Code</label>
+                <input name="PostalCode" id="postalCode" class="form-control" />
+                <span id="PostalCodeError" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                @*<label asp-for="DateofBirth" class="control-label"></label>
+                <input asp-for="DateofBirth" id="DoB" class="form-control" />
+                <span asp-validation-for="DateofBirth" class="text-danger"></span>*@
+                <label class="control-label">Date of Birth</label>
+                <input name="DateofBirth" id="dateofBirth" class="form-control" />
+                <span id="DoBError" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                @*<label asp-for="Mobile" class="control-label"></label>
+                <input asp-for="Mobile" class="form-control" />
+                <span asp-validation-for="Mobile" class="text-danger"></span>*@
+                <label class="control-label">Mobile</label>
+                <input name="Mobile" id="mobile" class="form-control" />
+                <span id="MobileError" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="button" value="Save" class="btn btn-primary" id="btnSave" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @*@{await Html.RenderPartialAsync("_ValidationScriptsPartial");}*@
+    <script src="/js/contact-edit.js"></script>
+}
